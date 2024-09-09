@@ -1,7 +1,25 @@
 
 ## Memory Game Programming
 - Using the Guese The Number Game as a guide, write the program for the Memmory Game
-1. 
+1. The user enters the game.
+2. the home page will appear
+3. the user will select the category and the level they want.
+-  start game button will appear.
+- when the start game button is clicked, generate the specific grid based on the level and category of the game.
+4. the game.
+- cards in pairs should appear.
+- Each card should have an image underneath it.
+- the cards should be spread randomly and should be flipped down.
+- when the game starts, the player is allowed to select two cards at a time.
+- As soon as the player clicks on their first selection, the stopwatch should start counting and the  card should flip and reveal the image underneath it.
+- When the player chooses their second selection,the moves should increase by one and the card will reveal the image underneath it.
+-If their first selected card and their second selected card have displays the same image, both cards should stay as they are with their images revealed and the user will gain 20 coins.
+- Else both cards should flip downwards as they were in the beginning concealing their images underneath them.
+
+4. when the user clicks on the sign-up button
+- the sign up page will appear.
+-when the user fills all the requirements and click submit, create a profile for the user.
+5. when the user clicks on the about link, the about page should load.
 
 
 
