@@ -36,3 +36,7 @@ In the profile page (/profile/page.tsx), I displayed the username of the player 
 ### Your task is to display the user ID of the player just under the username or on the next line (probably in line 33).
 
 HINT: The user ID of the player is stored in Firestore with the key "uid". For the username, the key is "username" as it is used here `<p>Username: {userData.username}</p>`
+
+# Task
+
+Profile Form will be used for Updating User Profile. Implement that functionality
