@@ -29,9 +29,10 @@ const ProfilePage = () => {
 
           {userData ? (
             <div className="mb-4">
+              <p>Username: {userData.username}</p>
               <p>Email: {userData.email}</p>
               <p>Coins: {userData.coins}</p>
-              <p>Game Progress: {userData.progress.join(", ")}</p>
+              {/* <p>Game Progress: {userData.progress.join(", ")}</p> */}
             </div>
           ) : (
             <p>Loading user data...</p>
