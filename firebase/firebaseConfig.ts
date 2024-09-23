@@ -5,7 +5,6 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-    appId:"1:527498677290:web:5f89966e71dc555ab10753",
     apiKey: "AIzaSyADJDdgq-CUIFS6fw-zGKlN7dIF4MMOI8c",
     authDomain:  "capstone-project-3ffe9.firebaseapp.com",
     projectId:  "capstone-project-3ffe9",
