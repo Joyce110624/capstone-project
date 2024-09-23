@@ -30,6 +30,7 @@ const ProfilePage = () => {
           {userData ? (
             <div className="mb-4">
               <p>Username: {userData.username}</p>
+              <p>UserID: {userData.uid}</p>
               <p>Email: {userData.email}</p>
               <p>Coins: {userData.coins}</p>
               {/* <p>Game Progress: {userData.progress.join(", ")}</p> */}
