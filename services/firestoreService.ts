@@ -1,4 +1,3 @@
-// services/firestoreService.ts
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "@/firebase/firebaseConfig";
 
@@ -38,5 +37,5 @@ export const updateUserProgress = async (userId: string, newProgress: string[]) 
   const userDocRef = doc(db, "users", userId);
   await updateDoc(userDocRef, {
     progress: newProgress,
-  });
+  })
 };
