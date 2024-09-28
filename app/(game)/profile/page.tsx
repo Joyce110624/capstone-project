@@ -8,6 +8,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { setDoc, doc } from "firebase/firestore"; // To store the image URL
 import { app } from "@/firebase/firebaseConfig"; // Your Firebase config
 import { getFirestore } from "firebase/firestore";
+import Navbar from "@/components/navbar";
 
 const ProfilePage = () => {
   const { user } = useAuth();

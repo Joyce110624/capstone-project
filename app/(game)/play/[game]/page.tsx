@@ -1,7 +1,7 @@
 // app/(game)/page.tsx
 import RequireAuth from "@/components/requireAuth";
 import Link from "next/link";
-const GamePage = () => {
+const GamePlay = () => {
   return (
     <RequireAuth>
       {/* Your game logic goes here */}
@@ -10,4 +10,4 @@ const GamePage = () => {
   );
 };
 
-export default GamePage;
+export default GamePlay;

@@ -1,13 +1,14 @@
 // app/(game)/page.tsx
+import Navbar from "@/components/navbar";
+
 import RequireAuth from "@/components/requireAuth";
 import Link from "next/link";
-const GamePage = () => {
+const SelectionPage = () => {
   return (
     <RequireAuth>
-      {/* Your game logic goes here */}
-      <div>Select environment and level</div>
+    <div>Select environment and level</div>
     </RequireAuth>
   );
 };
 
-export default GamePage;
+export default SelectionPage;
