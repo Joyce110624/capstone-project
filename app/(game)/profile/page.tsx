@@ -8,7 +8,7 @@ import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { setDoc, doc } from "firebase/firestore"; // To store the image URL
 import { app } from "@/firebase/firebaseConfig"; // Your Firebase config
 import { getFirestore } from "firebase/firestore";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar"; // Navbar is imported
 
 const ProfilePage = () => {
   const { user } = useAuth();
@@ -58,46 +58,49 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h2 className="text-3xl font-bold mb-6">Profile</h2>
-      {user ? (
-        <>
-          <p className="mb-4">Logged in as: {user.email}</p>
+    <>
+      <Navbar /> {/* Include Navbar here */}
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <h2 className="text-3xl font-bold mb-6">Profile</h2>
+        {user ? (
+          <>
+            <p className="mb-4">Logged in as: {user.email}</p>
 
-          {userData ? (
-            <div className="mb-4">
-              <p>Username: {userData.username}</p>
-              <p>UserID: {userData.uid}</p>
-              <p>Email: {userData.email}</p>
-              <p>Coins: {userData.coins}</p>
-              {/* Profile Image */}
-              {imageUrl ? (
-                <img src={imageUrl} alt="Profile" width={150} height={150} className="rounded-full" />
-              ) : (
-                <p>No profile photo</p>
-              )}
-              {/* Image Upload Section */}
-              <div>
-                <input type="file" accept="image/*" onChange={handleImageChange} />
-                <button onClick={handleUpload} className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
-                  Upload Photo
-                </button>
+            {userData ? (
+              <div className="mb-4">
+                <p>Username: {userData.username}</p>
+                <p>UserID: {userData.uid}</p>
+                <p>Email: {userData.email}</p>
+                <p>Coins: {userData.coins}</p>
+                {/* Profile Image */}
+                {imageUrl ? (
+                  <img src={imageUrl} alt="Profile" width={150} height={150} className="rounded-full" />
+                ) : (
+                  <p>No profile photo</p>
+                )}
+                {/* Image Upload Section */}
+                <div>
+                  <input type="file" accept="image/*" onChange={handleImageChange} />
+                  <button onClick={handleUpload} className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
+                    Upload Photo
+                  </button>
+                </div>
               </div>
-            </div>
-          ) : (
-            <p>Loading user data...</p>
-          )}
+            ) : (
+              <p>Loading user data...</p>
+            )}
 
-          <SignOutButton />
-        </>
-      ) : (
-        <>
-          <p>You are not logged in.</p>
-          <Link href="/login">Login</Link>
-          <Link href="/signup">Sign up</Link>
-        </>
-      )}
-    </div>
+            <SignOutButton />
+          </>
+        ) : (
+          <>
+            <p>You are not logged in.</p>
+            <Link href="/login">Login</Link>
+            <Link href="/signup">Sign up</Link>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 

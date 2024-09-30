@@ -7,6 +7,7 @@ const SelectionPage = () => {
   return (
     <RequireAuth>
     <div>Select environment and level</div>
+  <Navbar />
     </RequireAuth>
   );
 };

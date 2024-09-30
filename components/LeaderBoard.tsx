@@ -17,9 +17,10 @@ const Leaderboard = () => {
   }, []);
 
   return (
+    <>
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">Leaderboard</h2>
-      <ul>
+     <ul>
         {players.map((player, index) => (
           <li key={index} className="mb-2">
             {index + 1}. {player.email} - {player.coins} coins
@@ -27,6 +28,7 @@ const Leaderboard = () => {
         ))}
       </ul>
     </div>
+  </>
   );
 };
 

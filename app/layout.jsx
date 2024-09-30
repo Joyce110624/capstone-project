@@ -1,6 +1,5 @@
 import { AuthProvider } from "@/context/AuthContext";
 import "./globals.css";
-import navbar from "@/components/navbar";
 
 export const metadata = {
   title: "Create Next App",

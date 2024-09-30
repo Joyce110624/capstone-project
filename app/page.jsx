@@ -1,5 +1,4 @@
 "use client"; // Add this line to mark the component as a client component
-import Navbar from "@/components/navbar";
 
 import { useAuth } from "@/context/AuthContext";
 import { useEffect, useState } from "react";

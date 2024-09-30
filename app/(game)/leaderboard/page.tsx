@@ -1,6 +1,10 @@
 import Navbar from "@/components/navbar";
-export default function Leaderboard() {
+import Leaderboard from "@/components/LeaderBoard";
+export default function leaderboard() {
     return(
+        <>
+        <Navbar/>
         <div>Leaderboard</div>
+        </>
     );
 }
